@@ -6,9 +6,19 @@ jobs:
     steps:
       - name: Print greeting
         run: echo Hello, world!
+        
       - name: Print multiple lines
         run: |
             echo First output
             echo Second output
+            
+      - name: Print OS information
+        run: |
+            echo "**Operating System Information**"
+            echo "OS Name: $(uname -s)"
+            echo "OS Release: $(uname -r)"
+            echo "OS Version: $(uname -v)"
+            echo "Machine Architecture: $(uname -m)"
+            
       - name: Print Goodbye
         run: echo Done Bye! 
